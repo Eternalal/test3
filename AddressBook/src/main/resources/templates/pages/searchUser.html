@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+<body>
+<a href="#" th:href="@{/user/insertUser}">添加</a>
+
+<form th:action="@{/user/searchUser}">
+  <ul>
+    <li>name:
+    <li><input type="text" name="name" >
+    <li><input type="submit" value="Search">
+  </ul>
+
+</form>
+<table>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>phone</th>
+    <th>address</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td th:text="${searchUser.id}">1</td>
+    <td th:text="${searchUser.name}">MySQL</td>
+    <td th:text="${searchUser.phone}">RDBMS</td>
+    <td th:text="${searchUser.address}"></td>
+    <td><a href="#" th:href="@{/user/deleteById(id=${searchUser.id})}">Delete</a></td>
+    <td><a href="#" th:href="@{/user/findUser(id=${searchUser.id})}">Update</a>
+  </tr>
+  </tbody>
+</table>
+</table>
+</body>
+</html>

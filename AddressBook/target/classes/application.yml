@@ -1,0 +1,19 @@
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/SpringBoot_test
+  username: root
+  password: Demonsgudu123
+
+
+server:
+  port: 80
+
+mybatis:
+  type-aliases-package: addressbook.pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/pages/
+    suffix: .html

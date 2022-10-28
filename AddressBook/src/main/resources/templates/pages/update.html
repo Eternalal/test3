@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        ul li {list-style-type: none}
+    </style>
+</head>
+<body>
+<form th:action="@{/user/updateUser}" method="post">
+
+    <ul>
+        <li><input type="hidden" name="id" th:value="${findUser.id}">
+        <li>name:
+        <li><input type="text" name="name" th:value="${findUser.name}">
+        <li>phone:
+        <li><input type="text" name="phone" th:value="${findUser.phone}">
+        <li>address:
+        <li><input type="text" name="address" th:value="${findUser.address}">
+        <li><input type="submit" value="Update">
+        <li><input type="button" value="cancel" onclick="window.location.href='/user/findAllUser'">
+    </ul>
+</form>
+</body>
+</html>

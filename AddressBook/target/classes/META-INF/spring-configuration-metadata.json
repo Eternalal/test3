@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "jdbc",
+      "type": "javax.sql.DataSource",
+      "sourceType": "addressbook.config.jdbcConfig",
+      "sourceMethod": "dataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
